@@ -7,12 +7,15 @@ interface Props {
   onClick: () => void;
   backgroundColor: string;
   isAnswered: boolean;
+  children?: React.ReactNode;
 }
 
 const AnswerWrapper = styled.button<{
   isCorrect: boolean;
   backgroundColor: string;
   isAnswered: boolean;
+  children?: React.ReactNode;
+  onClick: () => void
 }>`
   all: unset;
   display: flex;
@@ -52,6 +55,7 @@ export function AnswerCard(props: Props) {
     >
       <ArabicSurahName>{props.arabicSurahName}</ArabicSurahName>
       <EnglishSurahName>{props.englishSurahName}</EnglishSurahName>
+      {props.children}  {/* Render any additional children passed */}
     </AnswerWrapper>
   );
 }
