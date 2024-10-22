@@ -7,6 +7,7 @@ export interface AyahData {
   audioUrl?: string;
 }
 
+// The ayah numbers in Juz Ama
 const TOTAL_AYAH_COUNT = 6236;
 const MIN_AYAH_NUMBER = 5673;
 
